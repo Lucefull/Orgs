@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/native';
 import {FlatList, StyleSheet, Text} from 'react-native';
 import {useProdutores} from '../../hooks/useProdutores';
 import {useTexts} from '../../hooks/useTexts';
@@ -7,6 +8,8 @@ import {Topo} from './components/Topo';
 const Produtores: React.FC<{melhoresProdutores: boolean}> = ({
   melhoresProdutores,
 }) => {
+  const navigation = useNavigation();
+
   const listaProdutores = useProdutores(melhoresProdutores);
   const texts = useTexts();
 
@@ -22,7 +25,14 @@ const Produtores: React.FC<{melhoresProdutores: boolean}> = ({
   return (
     <FlatList
       data={listaProdutores}
-      renderItem={({item}) => <Produtor {...item} onPress={() => {}} />}
+      renderItem={({item}) => (
+        <Produtor
+          {...item}
+          onPress={() => {
+            navigation.navigate('Produtor', item);
+          }}
+        />
+      )}
       keyExtractor={({nome}) => nome}
       ListHeaderComponent={topoLista}
       style={styles.list}
