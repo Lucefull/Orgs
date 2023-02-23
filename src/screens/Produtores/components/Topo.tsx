@@ -16,7 +16,7 @@ export const Topo: React.FC<{melhoresProdutores:Boolean}> = ({melhoresProdutores
       <Text style={styles.legend}>
         {melhoresProdutores
           ? texts?.legendaMelhoresProdutores
-          : texts?.boasVindas}
+          : texts?.legenda}
       </Text>
     </View>
   );

@@ -1,8 +1,8 @@
 import {ImageSourcePropType} from 'react-native';
 
 export interface IDetail {
-  name: string;
-  description: string;
-  price: string;
-  image: ImageSourcePropType;
+  nome: string;
+  descricao: string;
+  preco: string;
+  imagem: ImageSourcePropType;
 }

@@ -4,7 +4,7 @@ import {ImageSourcePropType} from 'react-native/types';
 export interface IProdutor {
   nome: string;
   imagem: ImageSourcePropType;
-  distancia: number | string;
+  distancia: number;
   estrelas: number;
-  cestas: IBusket[];
+  cestas: IBusket;
 }
