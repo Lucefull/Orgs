@@ -1,6 +1,6 @@
+import {StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
-import MelhoresProdutores from '../screens/BestProducers';
 import BestProducersRoutes from './BestProducersRoutes';
 import ProducerRoute from './ProducerRoute';
 
@@ -22,7 +22,10 @@ const AppRoutes = () => {
               Icon = Coracao;
             }
 
-            return <Icon color={color} />;
+            return <Icon color={color} height={20} width={20} />;
+          },
+          tabBarLabelStyle: {
+            fontSize: 15,
           },
         })}>
         <Tab.Screen name="Home" component={ProducerRoute} />
@@ -34,5 +37,9 @@ const AppRoutes = () => {
     </NavigationContainer>
   );
 };
+
+const styles = StyleSheet.create({
+  tabLabel: {},
+});
 
 export default AppRoutes;
