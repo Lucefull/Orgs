@@ -10,9 +10,7 @@ export const Topo: React.FC<{melhoresProdutores:Boolean}> = ({melhoresProdutores
   return (
     <View style={styles.header}>
       <Image source={logo} style={styles.image} />
-      <Text style={styles.welcome}>
-        {melhoresProdutores ? '' : texts.boasVindas}
-      </Text>
+      {!melhoresProdutores && <Text style={styles.welcome}>{ texts.boasVindas}</Text>}
       <Text style={styles.legend}>
         {melhoresProdutores
           ? texts.legendaMelhoresProdutores

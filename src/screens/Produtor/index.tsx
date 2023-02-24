@@ -24,9 +24,7 @@ const Produtor = () => {
             <Image source={imagem} style={styles.produtorImage} />
             <Text style={styles.produtor}>{nome}</Text>
           </View>
-          <Text style={styles.cestas}>
-            {tituloCestas}
-          </Text>
+          <Text style={styles.cestas}>{tituloCestas}</Text>
         </View>
       </>
     );
