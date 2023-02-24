@@ -2,8 +2,8 @@ import { ITexts } from './../interfaces/ITexts';
 import { useState, useEffect } from 'react';
 import { carregaTextos } from '../services/carregaDados';
 
-export const useTexts = ()=>{
-    const [texts, setTexts] = useState<ITexts>();
+const useTexts = ()=>{
+    const [texts, setTexts] = useState<ITexts>({});
     
     
     useEffect(()=>{
@@ -11,3 +11,5 @@ export const useTexts = ()=>{
     },[]);
     return texts;
 }
+
+export default useTexts;

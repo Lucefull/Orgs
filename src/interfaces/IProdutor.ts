@@ -6,5 +6,5 @@ export interface IProdutor {
   imagem: ImageSourcePropType;
   distancia: number;
   estrelas: number;
-  cestas: IBusket;
+  cestas: IBusket[];
 }

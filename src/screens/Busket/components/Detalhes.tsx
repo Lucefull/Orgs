@@ -1,6 +1,6 @@
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import Texto from '../../../components/Texto';
-import {useTexts} from '../../../hooks/useTexts';
+import useTexts from '../../../hooks/useTexts';
 import {IProdutor} from '../../../interfaces/IProdutor';
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
 };
 
 const Detalhes: React.FC<Props> = ({nome, descricao, preco, produtor}) => {
-  const botaoComprar = useTexts()?.botaoComprar;
+  const {botaoComprar} = useTexts();
 
   return (
     <View style={{paddingHorizontal:5}}>

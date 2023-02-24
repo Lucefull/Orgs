@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {useTexts} from '../../../hooks/useTexts';
+import useTexts from '../../../hooks/useTexts';
 
 import logo from '../../../assets/logo.png';
 
@@ -11,12 +11,12 @@ export const Topo: React.FC<{melhoresProdutores:Boolean}> = ({melhoresProdutores
     <View style={styles.header}>
       <Image source={logo} style={styles.image} />
       <Text style={styles.welcome}>
-        {melhoresProdutores ? '' : texts?.boasVindas}
+        {melhoresProdutores ? '' : texts.boasVindas}
       </Text>
       <Text style={styles.legend}>
         {melhoresProdutores
-          ? texts?.legendaMelhoresProdutores
-          : texts?.legenda}
+          ? texts.legendaMelhoresProdutores
+          : texts.legenda}
       </Text>
     </View>
   );

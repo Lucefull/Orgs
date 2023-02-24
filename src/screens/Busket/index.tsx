@@ -1,7 +1,7 @@
 import {FlatList, View} from 'react-native';
 import Texto from '../../components/Texto';
 import Topo from '../../components/Topo';
-import {useTexts} from '../../hooks/useTexts';
+import useTexts from '../../hooks/useTexts';
 import {IBusket} from '../../interfaces/IBusket';
 import { IDetail } from '../../interfaces/IDetail';
 import {IItem} from '../../interfaces/IItem';

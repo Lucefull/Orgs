@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import {FlatList, StyleSheet, Text} from 'react-native';
 import {useProdutores} from '../../hooks/useProdutores';
-import {useTexts} from '../../hooks/useTexts';
+import useTexts from '../../hooks/useTexts';
 import {Produtor} from './components/Produtor';
 import {Topo} from './components/Topo';
 
@@ -17,7 +17,7 @@ const Produtores: React.FC<{melhoresProdutores: boolean}> = ({
     return (
       <>
         <Topo melhoresProdutores={melhoresProdutores} />
-        <Text style={styles.title}>{texts?.tituloProdutor}</Text>
+        <Text style={styles.title}>{texts.tituloProdutor}</Text>
       </>
     );
   };
@@ -29,7 +29,7 @@ const Produtores: React.FC<{melhoresProdutores: boolean}> = ({
         <Produtor
           {...item}
           onPress={() => {
-            navigation.navigate('Produtor', item);
+            navigation.navigate('Produtor',item);
           }}
         />
       )}
