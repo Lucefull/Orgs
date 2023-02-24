@@ -9,7 +9,7 @@ type Props = {
 }
 
 const ProducerRoute: React.FC<Props> = ({MainComponent=Home} : Props) => {
-    return <Stack.Navigator>
+    return <Stack.Navigator screenOptions={{ headerShown: false }}>
     <Stack.Screen name='HomeScreen' component={MainComponent}/>
         <Stack.Screen name='Produtor' component={Produtor} />
     </Stack.Navigator>

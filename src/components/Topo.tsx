@@ -4,13 +4,14 @@ import {
   Image,
   ImageSourcePropType,
   StyleSheet,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 
 import topo from '../assets/topo.png';
 import Gradiente from '../assets/gradiente.svg';
 import VoltarSVG from '../assets/voltar.svg';
 import Texto from './Texto';
+import {useNavigation} from '@react-navigation/native';
 
 const width = Dimensions.get('screen').width;
 const HEIGHT_DEFAULT = 270;
@@ -26,6 +27,7 @@ const Topo: React.FC<Props> = ({
   image = topo,
   height = HEIGHT_DEFAULT,
 }: Props) => {
+  const navigation = useNavigation();
   const styles = stylesFunction(height);
   return (
     <>
@@ -36,7 +38,11 @@ const Topo: React.FC<Props> = ({
         style={styles.gradiente}
       />
       <Texto style={styles.title}>{title}</Texto>
-      <TouchableOpacity onPress={() => {}} style={styles.backButton}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.goBack();
+        }}
+        style={styles.backButton}>
         <VoltarSVG color="white" style={styles.back} />
       </TouchableOpacity>
     </>
@@ -72,4 +78,4 @@ const stylesFunction = (height: number) =>
     },
   });
 
-  export default Topo;
+export default Topo;
