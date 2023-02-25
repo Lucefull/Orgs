@@ -1,6 +1,7 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Busket from '../screens/Busket';
 import Home from '../screens/Home';
+import Pedido from '../screens/Pedido';
 import Produtor from '../screens/Produtor';
 
 const Stack = createNativeStackNavigator();
@@ -15,6 +16,7 @@ const ProducerRoute: React.FC<Props> = ({MainComponent = Home}: Props) => {
       <Stack.Screen name="HomeScreen" component={MainComponent} />
       <Stack.Screen name="Produtor" component={Produtor} />
       <Stack.Screen name="Cesta" component={Busket} />
+      <Stack.Screen name={'Pedido'} component={Pedido} />
     </Stack.Navigator>
   );
 };
