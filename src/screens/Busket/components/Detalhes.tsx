@@ -14,7 +14,7 @@ const Detalhes: React.FC<Props> = ({nome, descricao, preco, produtor}) => {
   const {botaoComprar} = useTexts();
 
   return (
-    <View style={{paddingHorizontal:5}}>
+    <View style={{paddingHorizontal: 5}}>
       <Texto style={styles.name}>{nome}</Texto>
       <View style={styles.farm}>
         <Image source={produtor.imagem} style={styles.farmImage} />
@@ -45,9 +45,7 @@ const styles = StyleSheet.create({
     width: 32,
     height: 32,
   },
-  farmName: {fontSize: 16, lineHeight: 26, marginLeft: 12,
-    color: '#464646'
-  },
+  farmName: {fontSize: 16, lineHeight: 26, marginLeft: 12, color: '#464646'},
   description: {
     color: '#A3A3A3',
     fontSize: 16,
