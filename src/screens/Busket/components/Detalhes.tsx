@@ -1,6 +1,9 @@
+import {useNavigation} from '@react-navigation/native';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import Texto from '../../../components/Texto';
 import useTexts from '../../../hooks/useTexts';
+import {IBuy} from '../../../interfaces/IBuy';
+import {INav} from '../../../interfaces/INav';
 import {IProdutor} from '../../../interfaces/IProdutor';
 
 type Props = {
@@ -11,6 +14,7 @@ type Props = {
 };
 
 const Detalhes: React.FC<Props> = ({nome, descricao, preco, produtor}) => {
+  const navigation = useNavigation<INav<IBuy>>();
   const {botaoComprar} = useTexts();
 
   return (
@@ -23,7 +27,13 @@ const Detalhes: React.FC<Props> = ({nome, descricao, preco, produtor}) => {
       <Texto style={styles.description}>{descricao}</Texto>
       <Texto style={styles.price}>{preco}</Texto>
 
-      <TouchableOpacity style={styles.button} onPress={() => {}}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate('HomeScreen', {
+            compra: {nome, timestamp: +new Date()},
+          });
+        }}>
         <Texto style={styles.textButton}>{botaoComprar}</Texto>
       </TouchableOpacity>
     </View>

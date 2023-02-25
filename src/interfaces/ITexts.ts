@@ -8,4 +8,5 @@ export interface ITexts {
   topoCesta?: string;
   botaoComprar?: string;
   tituloItens?: string;
+  mensagemCompra?: string;
 }
