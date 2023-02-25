@@ -13,8 +13,12 @@ type Props = {
   produtor: IProdutor;
 };
 
+type Nav = {
+  navigate: (value: string, props: Props) => void;
+};
+
 const Cesta: React.FC<Props> = ({detalhes, itens, produtor}) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<Nav>();
   const {nome, imagem, descricao, preco} = detalhes;
 
   return (

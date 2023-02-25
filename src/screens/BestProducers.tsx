@@ -1,7 +1,7 @@
-import Produtores from "./Produtores";
+import Produtores from './Produtores';
 
-const MelhoresProdutores = () =>{
-    return <Produtores melhoresProdutores />
-}
+const MelhoresProdutores = () => {
+  return <Produtores melhoresProdutores />;
+};
 
 export default MelhoresProdutores;

@@ -29,7 +29,7 @@ const Produtores: React.FC<{melhoresProdutores: boolean}> = ({
         <Produtor
           {...item}
           onPress={() => {
-            navigation.navigate('Produtor',item);
+            navigation.navigate('Produtor', item);
           }}
         />
       )}

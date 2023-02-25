@@ -80,11 +80,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 22,
     fontWeight: 'bold',
-    color:'#000000'
+    color: '#000000',
   },
   distance: {
     fontSize: 12,
     lineHeight: 19,
-    color:'#000000'
+    color: '#000000',
   },
 });

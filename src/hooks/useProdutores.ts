@@ -1,4 +1,4 @@
-import { IProducersData } from './../interfaces/IProducersData';
+import {IProducersData} from './../interfaces/IProducersData';
 import {IProdutor} from './../interfaces/IProdutor';
 import {carregaProdutores} from './../services/carregaDados';
 import {useEffect, useState} from 'react';

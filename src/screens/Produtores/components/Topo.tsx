@@ -4,17 +4,19 @@ import useTexts from '../../../hooks/useTexts';
 
 import logo from '../../../assets/logo.png';
 
-export const Topo: React.FC<{melhoresProdutores:Boolean}> = ({melhoresProdutores}) => {
+export const Topo: React.FC<{melhoresProdutores: Boolean}> = ({
+  melhoresProdutores,
+}) => {
   const texts = useTexts();
 
   return (
     <View style={styles.header}>
       <Image source={logo} style={styles.image} />
-      {!melhoresProdutores && <Text style={styles.welcome}>{ texts.boasVindas}</Text>}
+      {!melhoresProdutores && (
+        <Text style={styles.welcome}>{texts.boasVindas}</Text>
+      )}
       <Text style={styles.legend}>
-        {melhoresProdutores
-          ? texts.legendaMelhoresProdutores
-          : texts.legenda}
+        {melhoresProdutores ? texts.legendaMelhoresProdutores : texts.legenda}
       </Text>
     </View>
   );
