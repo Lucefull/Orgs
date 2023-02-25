@@ -12,6 +12,8 @@ import Gradiente from '../assets/gradiente.svg';
 import VoltarSVG from '../assets/voltar.svg';
 import Texto from './Texto';
 import {useNavigation} from '@react-navigation/native';
+import {INav} from '../interfaces/INav';
+import {IProdutor} from '../interfaces/IProdutor';
 
 const width = Dimensions.get('screen').width;
 const HEIGHT_DEFAULT = 270;

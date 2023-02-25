@@ -6,6 +6,7 @@ import Texto from '../../../components/Texto';
 import {IProdutor} from '../../../interfaces/IProdutor';
 import {IItem} from '../../../interfaces/IItem';
 import {IDetail} from '../../../interfaces/IDetail';
+import {INav} from '../../../interfaces/INav';
 
 type Props = {
   detalhes: IDetail;
@@ -13,12 +14,8 @@ type Props = {
   produtor: IProdutor;
 };
 
-type Nav = {
-  navigate: (value: string, props: Props) => void;
-};
-
 const Cesta: React.FC<Props> = ({detalhes, itens, produtor}) => {
-  const navigation = useNavigation<Nav>();
+  const navigation = useNavigation<INav<Props>>();
   const {nome, imagem, descricao, preco} = detalhes;
 
   return (
