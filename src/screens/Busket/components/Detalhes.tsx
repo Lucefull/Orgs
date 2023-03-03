@@ -30,7 +30,7 @@ const Detalhes: React.FC<Props> = ({nome, descricao, preco, produtor}) => {
       <TouchableOpacity
         style={styles.button}
         onPress={() => {
-          navigation.navigate('HomeScreen', {
+          navigation.navigate('Pedido', {
             compra: {nome, timestamp: +new Date()},
           });
         }}>
